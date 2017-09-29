@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Promise implementation of Promises/A+, and with es7 promise enhancements.",
   "author": "Allex Wang <allex.wxn@gmail.com>",
-  "main": "dist/promise.umd.js",
+  "browser": "dist/promise.umd.min.js",
   "module": "dist/promise.esm.js",
+  "main": "dist/promise.umd.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,12 +15,16 @@
     "promise"
   ],
   "dependencies": {
-    "core-js": "^2.5.1"
+    "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {
     "@fedor/standard": "latest",
     "babel-core": "^6.25.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.5.2",
+    "babel-runtime": "^6.26.0",
     "dom-cache": "^1.0.0",
     "replace-in-file": "^2.5.4",
     "rollup": "^0.49.3",
@@ -39,7 +44,7 @@
   },
   "maintainers": [
     {
-      "name": "allex",
+      "name": "public",
       "email": "allex.wxn@gmail.com"
     }
   ],
