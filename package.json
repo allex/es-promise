@@ -1,5 +1,5 @@
 {
-  "name": "@fedor/promise",
+  "name": "es-promise",
   "version": "1.0.0",
   "description": "Promise implementation of Promises/A+, and with es7 promise enhancements.",
   "author": "Allex Wang <allex.wxn@gmail.com>",
