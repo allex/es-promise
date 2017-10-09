@@ -11,8 +11,16 @@ Author: Allex Wang (allex.wxn@gmail.com)
 
 ## Installation
 
+NPM
+
 ```sh
-npm i es-promise
+npm i @fedor/promise
+```
+
+Combo
+
+```html
+<script src="//s1.analysys.cn/libs/??-/@fedor/promise@1.0.0/dist/promise.polyfill.min.js"></script>
 ```
 
 ### Auto-polyfill
@@ -20,13 +28,13 @@ npm i es-promise
 To polyfill the global environment (either in Node or in the browser via CommonJS) use the following code snippet:
 
 ```js
-require('es-promise').polyfill();
+require('@fedor/promise').polyfill();
 ```
 
 Alternatively
 
 ```js
-require('es-promise/dist/promise.polyfill');
+require('@fedor/promise/dist/promise.polyfill');
 ```
 
 Notice that we don't assign the result of `polyfill()` to any variable. The `polyfill()` method will patch the global
