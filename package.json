@@ -1,6 +1,6 @@
 {
   "name": "es-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Promise implementation of Promises/A+, and with es7 promise enhancements.",
   "author": "Allex Wang <allex.wxn@gmail.com>",
   "browser": "dist/promise.umd.min.js",
@@ -9,10 +9,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://git.analysys.cn/fss-modules/promise"
+    "url": "https://github.com/allex/es-promise.git"
   },
   "keywords": [
-    "promise"
+    "promise", "polyfill", "Promises.try", "Promise.prototype.finally"
   ],
   "dependencies": {
     "promise-polyfill": "^6.0.2"
