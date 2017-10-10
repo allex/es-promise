@@ -1,6 +1,6 @@
 {
   "name": "es-promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Promise implementation of Promises/A+, and with es7 promise enhancements.",
   "author": "Allex Wang <allex.wxn@gmail.com>",
   "browser": "dist/promise.umd.min.js",
