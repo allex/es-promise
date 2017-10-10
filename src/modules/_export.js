@@ -30,7 +30,7 @@ const USE_NATIVE = !!(function () {
 }())
 
 if (!USE_NATIVE) {
-  $Promise = _Promise
+  $Promise = global.Promise = _Promise
 }
 
 export default $Promise
