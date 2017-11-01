@@ -23,6 +23,7 @@
   "devDependencies": {
     "@fedor/standard": "latest",
     "babel-core": "^6.25.0",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -31,11 +32,12 @@
     "config-finder": "latest",
     "dom-cache": "^1.0.0",
     "replace-in-file": "^2.5.4",
-    "rollup-worker": "^1.0.0"
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-worker": "^1.0.1"
   },
   "peerDependencies": {},
   "scripts": {
-    "build": "npm test && node .build/build.js",
+    "build": "npm test && rollup-bundle --config .fssrc.js",
     "release": "node .build/release.js",
     "publish": "npm run build",
     "lint": "standard",

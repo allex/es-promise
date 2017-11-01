@@ -1,6 +1,15 @@
-// vim: set ft=javascript  fdm=marker et ff=unix tw=80 sw=4:
+// vim: set ft=javascript fdm=marker et ff=unix tw=80 sw=2:
 
 var path = require('path')
+var babel = require('rollup-plugin-babel')
+
+var plugins = [
+  babel({
+    babelrc: true,
+    runtimeHelpers: true,
+    exclude: 'node_modules/**'
+  })
+]
 
 module.exports = {
   rollup: {
@@ -8,7 +17,7 @@ module.exports = {
     entry: [
       {
         input: 'src/promise.js',
-        plugins: [],
+        plugins,
         targets: [
           {
             format: 'umd',
@@ -23,7 +32,7 @@ module.exports = {
       },
       {
         input: 'src/promise.polyfill.js',
-        plugins: [],
+        plugins,
         targets: [
           {
             format: 'umd',
