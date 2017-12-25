@@ -37,7 +37,7 @@
   },
   "peerDependencies": {},
   "scripts": {
-    "build": "npm test && rollup-bundle --config .fssrc.js",
+    "build": "npm run lint:fix && rollup-bundle --config .fssrc.js",
     "release": "node .build/release.js",
     "publish": "npm run build",
     "lint": "standard",
