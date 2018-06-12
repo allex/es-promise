@@ -2,18 +2,24 @@
 
 var path = require('path')
 var babel = require('rollup-plugin-babel')
+var dependencies = require('./package.json').dependencies
 
 var plugins = [
   babel({
     babelrc: true,
     runtimeHelpers: true,
     exclude: 'node_modules/**'
-  })
+  }),
+  'resolve',
+  'commonjs'
 ]
+
+var banner = `/*! A promise implementation of Promises/A+, and with es7 promise enhancements. | MIT Licensed | http://fedor.io/ */`
 
 module.exports = {
   rollup: {
     destDir: path.join(__dirname, './dist'),
+    dependencies,
     entry: [
       {
         input: 'src/promise.js',
@@ -22,11 +28,13 @@ module.exports = {
           {
             format: 'umd',
             name: 'ES6Promise',
-            file: 'promise.umd.js'
+            file: 'promise.umd.js',
+            banner
           },
           {
-            format: 'cjs',
-            file: 'promise.esm.js'
+            format: 'es',
+            file: 'promise.esm.js',
+            banner
           }
         ]
       },
@@ -37,7 +45,8 @@ module.exports = {
           {
             format: 'umd',
             name: 'ES6Promise',
-            file: 'promise.polyfill.js'
+            file: 'promise.polyfill.js',
+            banner
           }
         ]
       }

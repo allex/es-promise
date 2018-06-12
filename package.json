@@ -32,8 +32,8 @@
     "config-finder": "latest",
     "dom-cache": "^1.0.0",
     "replace-in-file": "^2.5.4",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-worker": "^1.0.1"
+    "rollup-worker": "next",
+    "rollup-plugin-babel": "^3.0.2"
   },
   "peerDependencies": {},
   "scripts": {
